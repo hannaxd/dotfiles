@@ -2,7 +2,8 @@
   hardware = {
     enableAllFirmware = true;
 
-    wooting.enable = true;
+    # this somehow doesn't work
+    # wooting.enable = true;
 
     opengl = {
       enable = true;

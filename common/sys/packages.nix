@@ -7,15 +7,17 @@
     nixUnstable
     hyfetch
     bottom
-    gnome.seahorse
+    # gnome.seahorse <- noved to using option
     vulkan-tools
     btop
 
-    # proton vpn
-    protonvpn-cli
-    protonvpn-gui
+    wootility # <- see extraHardware
   ];
 
-  programs.nix-index.enable = true;
-  programs.command-not-found.enable = false;
+  programs = {
+    nix-index.enable = true;
+    command-not-found.enable = false;
+    seahorse.enable = true;
+    openvpn3.enable = true;
+  };
 }

@@ -4,35 +4,33 @@
 { config, lib, pkgs, modulesPath, ... }:
 
 {
-  imports =
-    [ (modulesPath + "/installer/scan/not-detected.nix")
-    ];
+  imports = [ (modulesPath + "/installer/scan/not-detected.nix") ];
 
   boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "ahci" "usbhid" ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ ];
 
-  fileSystems."/" =
-    { device = "/dev/disk/by-uuid/27a4b6d4-db15-45d9-833c-a02d0697e8bc";
-      fsType = "ext4";
-    };
+  fileSystems."/" = {
+    device = "/dev/disk/by-uuid/27a4b6d4-db15-45d9-833c-a02d0697e8bc";
+    fsType = "ext4";
+  };
 
-  fileSystems."/home" =
-    { device = "/dev/disk/by-uuid/2feb7cdf-6358-4fa0-a3de-2b10f8e4ac1e";
-      fsType = "ext4";
-    };
+  fileSystems."/home" = {
+    device = "/dev/disk/by-uuid/2feb7cdf-6358-4fa0-a3de-2b10f8e4ac1e";
+    fsType = "ext4";
+  };
 
-  fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/47C6-3D2E";
-      fsType = "vfat";
-      options = [ "fmask=0022" "dmask=0022" ];
-    };
+  fileSystems."/boot" = {
+    device = "/dev/disk/by-uuid/47C6-3D2E";
+    fsType = "vfat";
+    options = [ "fmask=0022" "dmask=0022" ];
+  };
 
-  fileSystems."/home/ruby/games" =
-    { device = "/dev/disk/by-uuid/bc3e0e33-e843-4252-9202-47f04bff270d";
-      fsType = "ext4";
-    };
+  fileSystems."/home/ruby/games" = {
+    device = "/dev/disk/by-uuid/bc3e0e33-e843-4252-9202-47f04bff270d";
+    fsType = "ext4";
+  };
 
   swapDevices = [ ];
 
@@ -45,5 +43,6 @@
   # networking.interfaces.wlp15s0.useDHCP = lib.mkDefault true;
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
-  hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
+  hardware.cpu.amd.updateMicrocode =
+    lib.mkDefault config.hardware.enableRedistributableFirmware;
 }

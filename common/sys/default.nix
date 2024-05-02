@@ -3,6 +3,7 @@
     ./boot.nix
     ./compat.nix
     ./desktops.nix
+    ./extraHardware.nix
     ./fonts.nix
     ./kernel.nix
     ./network.nix

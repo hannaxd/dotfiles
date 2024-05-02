@@ -49,5 +49,7 @@
     blueman.enable = true; # bluetooth
 
     gnome.gnome-keyring.enable = true;
+
+    # Wooting can be found in extraHardware
   };
 }
