@@ -1,0 +1,1 @@
+_: { stylix = { autoEnable = false; }; }
