@@ -26,7 +26,7 @@
     let
       system = "x86_64-linux";
       desktopWallpaper = ./assets/wallpapers/wall.png;
-      desktopWallpaperVert = ./assets/wallpaper/wall-vert.png;
+      desktopWallpaperVert = ./assets/wallpapers/wall-vert.png;
       inherit (nixpkgs) lib;
     in {
       nixosConfigurations = {
@@ -62,6 +62,8 @@
 
                 useGlobalPkgs = true;
                 useUserPackages = true;
+
+                backupFileExtension = "bakup";
 
                 users.ruby = { ... }: {
                   imports = [ ./hosts/seele/home.nix ];

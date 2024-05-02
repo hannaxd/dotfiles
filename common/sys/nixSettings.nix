@@ -1,6 +1,6 @@
 _: {
   nix = {
-    setings = {
+    settings = {
       experimental-features = [ "nix-command" "flakes" ];
       trusted-users = [ "root" "ruby" ];
       auto-optimise-store = true;

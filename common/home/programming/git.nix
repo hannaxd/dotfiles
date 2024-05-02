@@ -10,7 +10,7 @@
     lfs.enable = true;
 
     extraConfig = {
-      init.defaultBranch = "mommy";
+      init.defaultBranch = "mistress";
       credential.helper = "${
           pkgs.git.override { withLibsecret = true; }
         }/bin/git-credential-libsecret";

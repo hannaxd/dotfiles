@@ -5,6 +5,7 @@ let
 in {
   xdg.configFile."hypr/hyprpaper.conf".text = ''
     ipc = off
+    splash = off
     preload = ${wall}
     preload = ${vertWall}
     wallpaper = DP-1,${wall}

@@ -6,12 +6,11 @@
 
     ./aria.nix
     ./browsers.nix
-    ./chatting.nix
+    ./chat.nix
     ./cli.nix
     ./media.nix
     ./mime.nix
     ./packages.nix
-    ./schizofox.nix
     ./services.nix
     ./terminal.nix
     ./vars.nix
